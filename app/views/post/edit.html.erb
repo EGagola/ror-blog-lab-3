@@ -1,0 +1,12 @@
+<h1>Edit post Detail</h1>
+
+<%= form_for @post, :url =>{:action => "update", :id =>@post} do |f| %>
+
+<p>Title: <%= f.text_area 'title' %></p>
+<p>Content: <%= f.text_area  'content' %></p>
+
+
+<%= f.submit "Save changes" %>
+<% end %>
+
+<%= link_to 'Back', {:action => 'list' } %>
